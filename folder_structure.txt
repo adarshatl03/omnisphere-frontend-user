@@ -1,0 +1,100 @@
+frontend/admin
+├── public                  # Static assets (logos, images, etc.)
+│   ├── logo.svg
+│   ├── favicon.ico
+│   └── robots.txt
+│
+├── src
+│   ├── app                 # Next.js App Router (Page structure)
+│   │   ├── (auth)          # Authentication pages (optional group)
+│   │   │   ├── login
+│   │   │   │   ├── page.tsx
+│   │   │   │   ├── form.tsx
+│   │   │   │   ├── styles.module.css
+│   │   │   │   └── utils.ts
+│   │   │   ├── register
+│   │   │   │   ├── page.tsx
+│   │   │   │   ├── form.tsx
+│   │   │   │   ├── styles.module.css
+│   │   │   │   └── utils.ts
+│   │   │   └── layout.tsx
+│   │   │
+│   │   ├── dashboard       # Protected admin dashboard
+│   │   │   ├── page.tsx
+│   │   │   ├── layout.tsx
+│   │   │   ├── overview.tsx
+│   │   │   ├── stats.tsx
+│   │   │   └── sidebar.tsx
+│   │   │
+│   │   ├── users           # User Management
+│   │   │   ├── page.tsx
+│   │   │   ├── list.tsx
+│   │   │   ├── details.tsx
+│   │   │   └── styles.module.css
+│   │   │
+│   │   ├── settings        # Settings Page
+│   │   │   ├── page.tsx
+│   │   │   ├── profile.tsx
+│   │   │   ├── security.tsx
+│   │   │   ├── notifications.tsx
+│   │   │   └── styles.module.css
+│   │   │
+│   │   ├── api             # API Routes (if needed)
+│   │   │   ├── auth
+│   │   │   │   ├── login.ts
+│   │   │   │   ├── logout.ts
+│   │   │   │   └── register.ts
+│   │   │   ├── users.ts
+│   │   │   └── settings.ts
+│   │   │
+│   │   ├── layout.tsx      # Root layout (Header, Sidebar)
+│   │   ├── page.tsx        # Default Home (Redirect to Dashboard)
+│   │   ├── favicon.ico
+│   │   └── globals.css
+│   │
+│   ├── components          # Reusable UI Components
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   ├── Input.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── Sidebar.tsx
+│   │   ├── Table.tsx
+│   │   ├── Toast.tsx
+│   │   └── Modal.tsx
+│   │
+│   ├── hooks               # Custom React Hooks
+│   │   ├── useAuth.ts
+│   │   ├── useFetch.ts
+│   │   ├── useTheme.ts
+│   │   └── useToast.ts
+│   │
+│   ├── lib                 # Utilities (API calls, helpers)
+│   │   ├── api.ts
+│   │   ├── auth.ts
+│   │   ├── fetch.ts
+│   │   ├── storage.ts
+│   │   ├── theme.ts
+│   │   └── constants.ts
+│   │
+│   ├── styles              # Global & component styles
+│   │   ├── globals.css
+│   │   ├── variables.css
+│   │   ├── dark-theme.css
+│   │   └── light-theme.css
+│   │
+│   └── types               # TypeScript Types
+│       ├── auth.ts
+│       ├── user.ts
+│       ├── settings.ts
+│       ├── api.ts
+│       └── index.ts
+│
+├── .env.local              # Environment variables
+├── .gitignore              # Ignore node_modules, .env, etc.
+├── Dockerfile              # Docker setup
+├── next.config.ts          # Next.js config
+├── package.json            # Dependencies & scripts
+├── postcss.config.mjs      # PostCSS config
+├── tailwind.config.ts      # Tailwind CSS config
+├── tsconfig.json           # TypeScript config
+└── README.md               # Documentation
